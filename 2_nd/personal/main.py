@@ -24,8 +24,8 @@ class Manager(Employee):
             print("Team list is empty right now")
     def team_get_details(self):
         if self.team == []:
-            print("Current team was not initialized with any member")
+            return("Current team was not initialized with any member")
         else:
-            for employye in self.team:
-                employye.get_details()
+            for employee in self.team:
+                employee.get_details()
         
