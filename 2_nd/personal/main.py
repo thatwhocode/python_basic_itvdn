@@ -15,13 +15,15 @@ class Manager(Employee):
     def add_employee(self, employee: Employee) -> None:
         if employee:
             self.team.append(employee)
-    def remove_employee(self, employee) -> None:
-        if employee in self.team:
-            self.team.remove(employee)
-        else:
-            print("There`s no such employee in team")
+    def remove_employee(self, employee) -> str:
         if self.team == []:
-            print("Team list is empty right now")
+            return("Team list is empty right now")
+        else:
+            if employee in self.team:
+                self.team.remove(employee)
+                return "Succesfully removed"
+            else:
+                return "There`s no such employee in team"
     def team_get_details(self):
         if self.team == []:
             return("Current team was not initialized with any member")
